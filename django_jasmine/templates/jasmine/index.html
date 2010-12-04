@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Jasmine Test Runner</title>
+    <link rel="stylesheet" href="{% url jasmine_css %}" type="text/css" media="screen">
+    <script type="text/javascript" src="{% url jasmine_js %}"></script>
+    <script type="text/javascript" src="{% url jasmine_html_js %}"></script>
+
+    <!-- include source files here... -->
+    {% for url in suite.js_files %}
+        <script type="text/javascript" src="{{ url }}"></script>
+    {% endfor %}
+
+    <!-- include media files here... -->
+    {% for url in suite.media_files %}
+        <script type="text/javascript" src="{{ MEDIA_URL }}{{ url }}"></script>
+    {% endfor %}
+
+    <!-- include spec files here... -->
+    {% for file in files %}
+        <script type="text/javascript" src="{% url jasmine_test file %}"></script>
+    {% endfor %}
+
+</head>
+<body>
+
+<script type="text/javascript">
+  jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+  jasmine.getEnv().execute();
+</script>
+
+</body>
+</html>
