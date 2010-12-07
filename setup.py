@@ -13,7 +13,7 @@ setup(
         'django_jasmine',
     ],
     package_data={
-        'django_jasmine': ['templates/jasmine/*', 'media/jasmine/*'],
+        'django_jasmine': ['templates/jasmine/*', 'media/jasmine-1.0.1/*'],
     },
     classifiers=['Development Status :: 3 - Alpha',
                  'Environment :: Web Environment',
