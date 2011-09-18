@@ -18,6 +18,12 @@ installation
 
 *See the example directory for more information.*
 
+debug
+=====
+
+If you encounter some errors that isn't obvious to debug, you can add
+"django_jasmine" to your loggers.
+
 license
 =======
 
