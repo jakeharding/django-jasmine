@@ -12,7 +12,7 @@ def run_tests(request, path):
     """Run the jasmine tests and render index.html"""
     full_path = os.path.join(settings.JASMINE_TEST_DIRECTORY, path)
     full_path, directories, files = os.walk(full_path).next()
-    for file_name in os.walk(full_path+'spec/').next()[2]:
+    for file_name in os.walk(os.path.join(full_path, 'spec')).next()[2]:
         files.append(file_name)
 
     suite = {}
@@ -28,7 +28,8 @@ def run_tests(request, path):
         try:
             json = simplejson.loads(json)
         except ValueError:
-            logger.info("You might have a syntax error in your files.json")
+            logger.info("You might have a syntax error in your files.json, "
+                "like a surplus comma")
             # Trick to call back the django handler500, couldn't find a way to
             # customize the Exception Type field in the debug Traceback
             json = simplejson.loads(json)
