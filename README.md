@@ -24,6 +24,15 @@ debug
 If you encounter some errors that isn't obvious to debug, you can add
 "django_jasmine" to your loggers.
 
+todo
+====
+
+ 1. Write django tests for this app
+ 2. Add headless testing environments (e.g jasmine-headless-webkit or Zombie.js)
+ 3. Add Growl/notifyd notifications
+ 4. Rewrite the view to be class-based
+ 5. Refactorize urls for something prettier
+
 license
 =======
 
