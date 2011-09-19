@@ -31,6 +31,25 @@ Installation
 
 *See the example directory for more information.*
 
+Template
+========
+
+If you wish to modify the jasmine index template for any reason (e.g. add a new
+jasmine reporter), you can create a jasmine/index.html template as follow::
+
+    {% extends "jasmine/base.html" %}
+
+    {% block jasmine_extra %}
+        {# If you want to extend the default jasmineEnv config #}
+    {% endblock %}
+
+    {% block jasmine %}
+        {# If you wish to rewrite the whole html runner script #}
+    {% endblock %}
+
+
+*Read templates/jasmine/base.html for the default config*
+
 
 Debug
 =====
