@@ -12,8 +12,8 @@
     <script type="text/javascript" src="{{ url }}"></script>
     {% endfor %}
 
-    <!-- include media files here... -->
-    {% for url in suite.media_files %}
+    <!-- include static files here... -->
+    {% for url in suite.static_files %}
     <script type="text/javascript" src="{{ MEDIA_URL }}{{ url }}"></script>
     {% endfor %}
 

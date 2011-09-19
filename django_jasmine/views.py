@@ -19,7 +19,7 @@ def run_tests(request, path):
 
     # defaults
     suite['js_files'] = []
-    suite['media_files'] = []
+    suite['static_files'] = []
 
     # load files.json if present
     if 'files.json' in files:
