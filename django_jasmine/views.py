@@ -3,6 +3,7 @@ import os
 
 from django.conf import settings
 from django.shortcuts import render_to_response
+from django.template import RequestContext
 from django.utils import simplejson
 
 logger = logging.getLogger("django_jasmine")
@@ -33,11 +34,12 @@ def run_tests(request, path):
             # Trick to call back the django handler500, couldn't find a way to
             # customize the Exception Type field in the debug Traceback
             json = simplejson.loads(json)
-
-
         suite.update(json)
 
-    return render_to_response('jasmine/index.html', {
+    data = {
         'files': [path + file for file in files if file.endswith('js')],
         'suite': suite,
-    })
+    }
+
+    return render_to_response('jasmine/index.html', data,
+        context_instance=RequestContext(request))

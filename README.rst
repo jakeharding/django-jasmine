@@ -23,13 +23,15 @@ Installation
 3. Add settings.JASMINE_TEST_DIRECTORY, containing the path to your javascript
    jasmine test files.  Files.json should be in this directory and all test
    files should be in settings.JASMINE_TEST_DIRECTORY + '/spec' *
-4. Add all Javascript files (including jQuery, and any other libraries) to
+4. Makes sure you have properly defined a STATIC_URL.
+5. Add all Javascript files (including jQuery, and any other libraries) to
    files.json
-5. Add a urlconf to include('django_jasmine.urls').
-6. Visit the URL you've included in your urlconf to display Jasmine test
+6. Add a urlconf to include('django_jasmine.urls').
+7. Visit the URL you've included in your urlconf to display Jasmine test
    results.
 
 *See the example directory for more information.*
+
 
 Template
 ========
