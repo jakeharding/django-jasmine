@@ -50,6 +50,10 @@ jasmine reporter), you can create a jasmine/index.html template as follow::
 
 *Read templates/jasmine/base.html for the default config*
 
+Several versions of jasmine will be kept for retro-compatibility. You can
+override jasmine/base.html, and call for a specific version of jasmine (default
+to jasmine-latest, a symlink to the latest version)
+
 
 Debug
 =====
