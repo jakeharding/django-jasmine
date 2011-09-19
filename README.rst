@@ -22,7 +22,7 @@ Installation
 2. Add 'django_jasmine' to your settings.INSTALLED_APPS.
 3. Add settings.JASMINE_TEST_DIRECTORY, containing the path to your javascript
    jasmine test files.  Files.json should be in this directory and all test
-   files should be in settings.JASMINE_TEST_DIRECTORY + '/spec' *
+   files should be in os.path.join(settings.JASMINE_TEST_DIRECTORY, 'spec') *
 4. Makes sure you have properly defined a STATIC_URL.
 5. Add all Javascript files (including jQuery, and any other libraries) to
    files.json
@@ -57,6 +57,16 @@ override jasmine/base.html, and call for a specific version of jasmine (default
 to jasmine-latest, a symlink to the latest version)
 
 
+Fixtures
+========
+
+jasmine-jquery allowing to add fixtures, you can set them in
+os.path.join(settings.JASMINE_TEST_DIRECTORY, 'fixtures'). Then in your spec::
+
+    jasmine.getFixtures().fixturesPath = "/jasmine/fixtures/";
+    loadFixtures("template.html")
+
+
 Debug
 =====
 
@@ -71,7 +81,7 @@ Todo
 2. Add headless testing environments (e.g jasmine-headless-webkit or Zombie.js)
 3. Add Growl/notifyd notifications
 4. Rewrite the view to be class-based
-5. Refactorize urls for something prettier
+5. Add more settings for more flexibility
 
 Versions
 ========
