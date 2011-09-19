@@ -3,9 +3,9 @@ from distutils.core import setup
 
 setup(
     name='django-jasmine',
-    version='0.2',
+    version='0.3',
     description='Jasmine Javascript testing integration for Django.',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     author='Jonathan McCoy',
     author_email='modelsolutions@gmail.com',
     maintainer='Adrien Lemaire',
