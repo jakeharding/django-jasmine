@@ -15,7 +15,7 @@ setup(
         'django_jasmine',
     ],
     package_data={
-        'django_jasmine': ['templates/jasmine/*', 'media/jasmine-1.0.1/*'],
+        'django_jasmine': ['templates/jasmine/*', 'media/jasmine-1.1.0.rc1/*'],
     },
     classifiers=[
         "Development Status :: 4 - Beta",
