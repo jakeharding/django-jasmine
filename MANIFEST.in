@@ -1,5 +1,5 @@
 include LICENSE
-include README.md
+include README.rst
 include example/jasmine/*
 include example/jasmine/spec/*
 include django_jasmine/media/jasmine-1.0.1/*
