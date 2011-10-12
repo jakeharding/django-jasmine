@@ -1,6 +1,6 @@
 include LICENSE
 include README.rst
-include example/jasmine/*
-include example/jasmine/spec/*
-include django_jasmine/media/jasmine-1.0.1/*
-include django_jasmine/templates/jasmine/*
+recursive-include django_jasmine *
+recursive-include example *
+#recursive-exclude example *.py[co]  No .pyc or .pyo included
+
