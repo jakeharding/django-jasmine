@@ -1,6 +1,0 @@
-include LICENSE
-include README.rst
-recursive-include django_jasmine *
-recursive-include example *
-#recursive-exclude example *.py[co]  No .pyc or .pyo included
-
