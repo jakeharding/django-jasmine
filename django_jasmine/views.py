@@ -11,10 +11,15 @@ logger = logging.getLogger("django_jasmine")
 
 def run_tests(request, path):
     """Run the jasmine tests and render index.html"""
-    full_path = os.path.join(settings.JASMINE_TEST_DIRECTORY, path)
-    full_path, directories, files = os.walk(full_path).next()
-    for file_name in os.walk(os.path.join(full_path, 'spec')).next()[2]:
-        files.append(file_name)
+    root = os.path.join(settings.JASMINE_TEST_DIRECTORY, path)
+    # Get all files in spec dir and subdirs
+    all_files = []
+    for curpath, dirs, files in os.walk(os.path.join(root, "spec")):
+        for name in files:
+            if not name.startswith("."):
+                "We want to avoid .file.js.swp and co"
+                curpath = curpath.replace(os.path.join(root, "spec"), "")
+                all_files.append(os.path.join(curpath, name))
 
     suite = {}
 
@@ -24,7 +29,7 @@ def run_tests(request, path):
 
     # load files.json if present
     if 'files.json' in files:
-        file = open(os.path.join(full_path, 'files.json'), 'r')
+        file = open(os.path.join(root, 'files.json'), 'r')
         json = file.read()
         try:
             json = simplejson.loads(json)
@@ -37,7 +42,7 @@ def run_tests(request, path):
         suite.update(json)
 
     data = {
-        'files': [path + file for file in files if file.endswith('js')],
+        'files': [path + file for file in all_files if file.endswith('js')],
         'suite': suite,
     }
 
