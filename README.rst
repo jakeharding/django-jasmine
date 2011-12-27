@@ -74,14 +74,22 @@ If you encounter some errors that isn't obvious to debug, you can add
 "django_jasmine" to your loggers.
 
 
+Integration with ./manage.py tests
+==================================
+
+To do so, I recommend using 
+`EnvJasmine <https://github.com/trevmex/EnvJasmine>`_, and use 
+`Fabric <http://docs.fabfile.org/en/1.3.3/index.html>`_ to run EnvJasmine after
+running manage.py tests
+
+
 Todo
 ====
 
 1. Write django tests for this app
-2. Add headless testing environments (e.g jasmine-headless-webkit or Zombie.js)
-3. Add Growl/notifyd notifications
-4. Rewrite the view to be class-based
-5. Add more settings for more flexibility
+2. Add Growl/notifyd notifications
+3. Rewrite the view to be class-based
+4. Add more settings for more flexibility
 
 Versions
 ========
