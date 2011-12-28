@@ -3,6 +3,7 @@ MANIFEST
 dist
 *pyc
 *swp
+*swo
 build
 django_jasmine.egg-info/
 distribute*

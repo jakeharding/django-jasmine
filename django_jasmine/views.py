@@ -28,7 +28,7 @@ def run_tests(request, path):
     suite['static_files'] = []
 
     # load files.json if present
-    if 'files.json' in files:
+    if os.path.exists(os.path.join(root, "files.json")):
         file = open(os.path.join(root, 'files.json'), 'r')
         json = file.read()
         try:
