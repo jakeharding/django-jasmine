@@ -15,6 +15,12 @@ provides a set of custom matchers for jQuery framework and an API for handling
 HTML fixtures in your specs.
 
 
+.. note::
+
+    Being overwhelmed by work, I won’t upgrade this package if nobody asks for
+    it. If you’re capable, please fork and pull request to help me, thanks in
+    advance !
+
 Installation
 ============
 
