@@ -26,6 +26,13 @@
     <script src="{% url jasmine_test file %}"></script>
     {% endfor %}
 
+    {% load assets %}
+    {% for bundle in bundles %}
+      {% assets bundle %}
+       <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+      {% endassets %}
+    {% endfor %}
+
 </head>
 <body>
 
