@@ -30,6 +30,7 @@
 
     {% load assets %}
     {% for bundle in bundles %}
+      <!-- Loading bundle {{ bundle }} -->
       {% assets bundle %}
        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
       {% endassets %}
