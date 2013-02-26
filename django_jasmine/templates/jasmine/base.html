@@ -1,15 +1,17 @@
+{% load static %}
+
 <!doctype html>
 
 <html>
 <head>
     <title>Jasmine Spec Runner</title>
-    <link rel="stylesheet" href="{{ STATIC_URL }}jasmine-latest/jasmine.css"
+    <link rel="stylesheet" href="{% get_static_prefix %}jasmine-latest/jasmine.css"
         media="screen">
 
     {# core files #}
-    <script  src="{{ STATIC_URL }}jasmine-latest/jasmine.js"></script>
-    <script  src="{{ STATIC_URL }}jasmine-latest/jasmine-html.js"></script>
-    <script  src="{{ STATIC_URL }}jasmine-jquery-latest.js"></script>
+    <script  src="{% get_static_prefix %}jasmine-latest/jasmine.js"></script>
+    <script  src="{% get_static_prefix %}jasmine-latest/jasmine-html.js"></script>
+    <script  src="{% get_static_prefix %}jasmine-jquery-latest.js"></script>
 
     {# source files #}
     {% for url in suite.js_files %}
@@ -18,7 +20,7 @@
 
     {# static files #}
     {% for url in suite.static_files %}
-    <script src="{{ STATIC_URL }}{{ url }}"></script>
+    <script src="{% get_static_prefix %}{{ url }}"></script>
     {% endfor %}
 
     {# spec files #}
