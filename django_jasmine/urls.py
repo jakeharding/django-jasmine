@@ -20,5 +20,10 @@ urlpatterns = patterns('django.views',
             settings.JASMINE_TEST_DIRECTORY, "fixtures",
         ),
     }, name='jasmine_fixtures'),
+    url(r'^helpers/(?P<path>.*)$', 'static.serve', {
+        'document_root': os.path.join(
+            settings.JASMINE_TEST_DIRECTORY, "helpers",
+        ),
+    }, name='jasmine_fixtures'),
     url('^(?P<path>.*)$', run_tests, name='jasmine_test_overview'),
 )
