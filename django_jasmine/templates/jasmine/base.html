@@ -11,11 +11,20 @@
     {# core files #}
     <script  src="{% get_static_prefix %}jasmine-latest/jasmine.js"></script>
     <script  src="{% get_static_prefix %}jasmine-latest/jasmine-html.js"></script>
+    <script  src="{% get_static_prefix %}jasmine-ajax-latest.js"></script>
     <script  src="{% get_static_prefix %}jasmine-jquery-latest.js"></script>
 
     {# source files #}
     {% for url in suite.js_files %}
     <script src="{{ url }}"></script>
+    {% endfor %}
+
+    {% load assets %}
+    {% for bundle in suite.bundles %}
+      <!-- Loading bundle {{ bundle }} -->
+      {% assets bundle %}
+       <script type="text/javascript" src="{{ ASSET_URL }}" data-cover></script>
+      {% endassets %}
     {% endfor %}
 
     {# static files #}
@@ -28,13 +37,6 @@
     <script src="{% url jasmine_test file %}"></script>
     {% endfor %}
 
-    {% load assets %}
-    {% for bundle in suite.bundles %}
-      <!-- Loading bundle {{ bundle }} -->
-      {% assets bundle %}
-       <script type="text/javascript" src="{{ ASSET_URL }}" data-cover></script>
-      {% endassets %}
-    {% endfor %}
 
 </head>
 <body>
