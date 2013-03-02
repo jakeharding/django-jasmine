@@ -13,6 +13,7 @@
     <script  src="{% get_static_prefix %}jasmine-latest/jasmine-html.js"></script>
     <script  src="{% get_static_prefix %}jasmine-ajax-latest.js"></script>
     <script  src="{% get_static_prefix %}jasmine-jquery-latest.js"></script>
+    <script  src="{% get_static_prefix %}blanket.min.js" data-cover-adapter="{% get_static_prefix %}jasmine-blanket.js"></script>
 
     {# source files #}
     {% for url in suite.js_files %}
