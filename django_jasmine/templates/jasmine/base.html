@@ -28,6 +28,12 @@
       {% endassets %}
     {% endfor %}
 
+    {% load gears %}
+    {% for root in suite.roots %}
+      <!-- Loading root {{ root }} -->
+      {% js_asset_tag root %}
+    {% endfor %}
+
     {# static files #}
     {% for url in suite.static_files %}
     <script src="{% get_static_prefix %}{{ url }}"></script>

@@ -1,0 +1,13 @@
+pairs:
+  # <initials>: <Firstname> <Lastname>[; <email-id>]
+  jr: JR Boyens; jboyens
+  jb: Jesse Bounds; jbounds
+  ks: Karan Sagar; karan
+  js: Jesse Smith; jsmith
+  by: Benjamin Yolken; benjamin
+  pl: Peter Linnartz; peter
+  jp: John Pena; pena
+email:
+  prefix: pair
+  domain: mopub.com
+  no_solo_prefix: true

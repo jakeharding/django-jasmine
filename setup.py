@@ -26,7 +26,7 @@ META_DATA = dict(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Testing',
     ],
-    install_requires= ['Django>=1.3', ],
+    install_requires=['Django>=1.3', 'webassets', 'gears'],
     packages=find_packages(exclude=["example", ]),
     include_package_data=True,
     zip_safe=False,
