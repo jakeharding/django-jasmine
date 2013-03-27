@@ -11,6 +11,7 @@
     {# core files #}
     <script  src="{% get_static_prefix %}jasmine-latest/jasmine.js"></script>
     <script  src="{% get_static_prefix %}jasmine-latest/jasmine-html.js"></script>
+    <script  src="{% get_static_prefix %}jasmine-latest/jasmine-console.js"></script>
     <script  src="{% get_static_prefix %}jasmine-ajax-latest.js"></script>
     <script  src="{% get_static_prefix %}jasmine-jquery-latest.js"></script>
     {#<script  src="{% get_static_prefix %}blanket.min.js" data-cover-adapter="{% get_static_prefix %}jasmine-blanket.js"></script>#}
@@ -63,6 +64,12 @@
         jasmineEnv.specFilter = function(spec) {
             return htmlReporter.specFilter(spec);
         };
+
+        {% if suite.use_console_reporter %}
+          debugger
+          var print = function(arguments) { console.log(arguments); };
+          jasmineEnv.addReporter(new jasmine.ConsoleReporter(print, function() {}, true));
+        {% endif %}
 
         // Additional configuration can be done in this block
         {% block jasmine_extra %}{% endblock %}
