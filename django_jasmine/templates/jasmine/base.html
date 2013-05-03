@@ -41,6 +41,11 @@
     <script src="{% get_static_prefix %}{{ url }}"></script>
     {% endfor %}
 
+    {# helpers #}
+    {% for url in suite.helpers %}
+    <script src="{% get_static_prefix %}{{ url }}"></script>
+    {% endfor %}
+
     {# spec files #}
     {% for file in files %}
     <script src="{% url jasmine_test file %}"></script>
