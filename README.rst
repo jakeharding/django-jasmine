@@ -100,11 +100,16 @@ Todo
 Versions
 ========
 
+Latest (Default)
+
+* jasmine-latest 1.3.1
+* jasmine-jquery-latest 1.5.2
+
 The Pypi django-jasmine version 0.3.1 includes:
 
 * jasmine 1.1.0.rc1
 * jasmine-jquery 1.3.1
-* jasmine-latest 1.3.1
+
 
 since django-jasmine==0.3.1, it'll also insure that Django>=1.3 is installed,
 otherwise will install it as a dependency
