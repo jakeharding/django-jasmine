@@ -83,8 +83,8 @@ If you encounter some errors that isn't obvious to debug, you can add
 Integration with ./manage.py tests
 ==================================
 
-To do so, I recommend using 
-`EnvJasmine <https://github.com/trevmex/EnvJasmine>`_, and use 
+To do so, I recommend using
+`EnvJasmine <https://github.com/trevmex/EnvJasmine>`_, and use
 `Fabric <http://docs.fabfile.org/en/1.3.3/index.html>`_ to run EnvJasmine after
 running manage.py tests
 
@@ -104,6 +104,7 @@ The Pypi django-jasmine version 0.3.1 includes:
 
 * jasmine 1.1.0.rc1
 * jasmine-jquery 1.3.1
+* jasmine-latest 1.3.1
 
 since django-jasmine==0.3.1, it'll also insure that Django>=1.3 is installed,
 otherwise will install it as a dependency
