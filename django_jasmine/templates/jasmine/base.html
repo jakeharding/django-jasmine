@@ -30,20 +30,18 @@
 </head>
 <body>
 
-<h1>Jasmine Spec Runner</h1>
-
 <script>
     {% block jasmine %}
     (function() {
         var jasmineEnv = jasmine.getEnv();
         jasmineEnv.updateInterval = 1000;
 
-        var trivialReporter = new jasmine.TrivialReporter();
+        var htmlReporter = new jasmine.HtmlReporter();
 
-        jasmineEnv.addReporter(trivialReporter);
+        jasmineEnv.addReporter(htmlReporter);
 
         jasmineEnv.specFilter = function(spec) {
-            return trivialReporter.specFilter(spec);
+            return htmlReporter.specFilter(spec);
         };
 
         // Additional configuration can be done in this block
@@ -61,6 +59,7 @@
         function execJasmine() {
             jasmineEnv.execute();
         }
+
     })();
     {% endblock %}
 </script>
