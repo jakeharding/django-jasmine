@@ -1,6 +1,10 @@
 import os
+import django
 
-from django.conf.urls.defaults import *
+if django.VERSION >= (1, 5):
+    from django.conf.urls import patterns, url
+else:
+    from django.conf.urls.defaults import *
 from django.conf import settings
 
 from views import run_tests
