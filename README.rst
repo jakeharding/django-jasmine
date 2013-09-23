@@ -47,6 +47,10 @@ jasmine reporter), you can create a jasmine/index.html template as follow::
 
     {% extends "jasmine/base.html" %}
 
+    {% block jasmine_preload %}
+        {# If you need to do any setup before dependencies in files.json are loaded (like define app namespace) #}
+    {% endblock %}
+
     {% block jasmine_extra %}
         {# If you want to extend the default jasmineEnv config #}
     {% endblock %}

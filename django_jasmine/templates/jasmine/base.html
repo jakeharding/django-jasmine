@@ -12,6 +12,8 @@
     <script  src="{{ STATIC_URL }}jasmine-latest/jasmine-html.js"></script>
     <script  src="{{ STATIC_URL }}jasmine-jquery-latest.js"></script>
 
+    {% block jasmine_preload %}{% endblock %}
+
     {# source files #}
     {% for url in suite.js_files %}
     <script src="{{ url }}"></script>
