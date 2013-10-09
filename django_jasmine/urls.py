@@ -7,7 +7,7 @@ else:
     from django.conf.urls.defaults import *
 from django.conf import settings
 
-from views import run_tests
+from .views import run_tests
 
 static_root = os.path.join(os.path.dirname(__file__), 'static')
 
