@@ -46,10 +46,19 @@
     <script src="{% get_static_prefix %}{{ url }}"></script>
     {% endfor %}
 
+    <!-- SPEC BUNDLES (load faster than loading specs individually -->
     {# spec files #}
+    {% for bundle in suite.spec_bundles %}
+        {% assets bundle %}
+       <script type="text/javascript" src="{{ ASSET_URL }}" data-cover></script>
+      {% endassets %}
+    {% endfor %}
+
+    {% comment %}
     {% for file in files %}
     <script src="{% url jasmine_test file %}"></script>
     {% endfor %}
+    {% endcomment %}
 
 
 </head>
