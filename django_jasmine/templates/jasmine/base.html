@@ -46,7 +46,7 @@
     <script src="{% get_static_prefix %}{{ url }}"></script>
     {% endfor %}
 
-    <!-- SPEC BUNDLES (load faster than loading specs individually -->
+    <!-- SPEC BUNDLES (load faster than loading specs individually) -->
     {# spec files #}
     {% for bundle in suite.spec_bundles %}
         {% assets bundle %}
