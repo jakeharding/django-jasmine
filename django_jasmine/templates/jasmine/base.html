@@ -47,7 +47,7 @@
     {% endfor %}
 
     {# spec files #}
-    {% if use_webassets %}
+    {% if spec_use_webassets %}
     <!-- SPEC BUNDLES (load faster than loading specs individually) -->
         {% for bundle in suite.spec_bundles %}
             {% assets bundle %}

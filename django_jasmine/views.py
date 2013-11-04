@@ -44,7 +44,7 @@ def run_tests(request, path):
     data = {
         'files': [path + file for file in all_files if file.endswith('js')],
         'suite': suite,
-        'use_webassets': os.environ.get('WEBASSETS_ABSTAIN') != '1'
+        'spec_use_webassets': os.environ.get('SPEC_WEBASSETS_ABSTAIN') != '1'
     }
 
     return render_to_response('jasmine/index.html', data,
