@@ -1,10 +1,15 @@
 import logging
 import os
 
+import django
 from django.conf import settings
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.utils import simplejson
+
+if django.VERSION >= (1, 5):
+    import json as simplejson
+else:
+    from django.utils import simplejson
 
 logger = logging.getLogger("django_jasmine")
 
