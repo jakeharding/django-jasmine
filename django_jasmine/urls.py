@@ -1,6 +1,6 @@
 import os
 
-from django.conf.urls.defaults import *
+from django.conf.urls import patterns, url
 from django.conf import settings
 
 from views import run_tests
