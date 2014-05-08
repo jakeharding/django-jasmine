@@ -47,10 +47,19 @@
     {% endfor %}
 
     {# spec files #}
-    {% for file in files %}
-    <script src="{% url 'jasmine_test' file %}"></script>
-    {% endfor %}
-
+    {% if spec_use_webassets %}
+    <!-- SPEC BUNDLES (load faster than loading specs individually) -->
+        {% for bundle in suite.spec_bundles %}
+            {% assets bundle %}
+           <script type="text/javascript" src="{{ ASSET_URL }}" data-cover></script>
+          {% endassets %}
+        {% endfor %}
+    {% else  %}
+    <!-- Loading specs without webassets -->
+        {% for file in files %}
+        <script src="{% url 'jasmine_test' file %}"></script>
+        {% endfor %}
+    {% endif %}
 
 </head>
 <body>
