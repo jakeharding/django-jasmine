@@ -48,7 +48,7 @@
 
     {# spec files #}
     {% for file in files %}
-    <script src="{% url jasmine_test file %}"></script>
+    <script src="{% url 'jasmine_test' file %}"></script>
     {% endfor %}
 
 
