@@ -12,7 +12,7 @@ META_DATA = dict(
     author_email='modelsolutions@gmail.com',
     maintainer='Adrien Lemaire',
     maintainer_email='adrien.lemaire@gmail.com',
-    url='https://github.com/Fandekasp/django-jasmine',
+    url='https://github.com/Aquasys/django-jasmine',
     keywords='django javascript test',
     classifiers=[
         "Development Status :: 4 - Beta",
