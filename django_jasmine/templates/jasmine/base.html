@@ -23,12 +23,9 @@
     {% endfor %}
 
     {% load assets %}
-    {% for bundle in suite.bundles %}
-      <!-- Loading bundle {{ bundle }} -->
-      {% assets bundle %}
-       <script type="text/javascript" src="{{ ASSET_URL }}" data-cover></script>
-      {% endassets %}
-    {% endfor %}
+
+    <!-- The project under test must define how to include all Javascript by defining an all_js template-->
+    {% include "common/partials/all_js.html" %}
 
     {% load gears %}
     {% for root in suite.roots %}
