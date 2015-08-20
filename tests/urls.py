@@ -1,3 +1,5 @@
+"""Setup url to run tests."""
+
 from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
