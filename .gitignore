@@ -8,3 +8,4 @@ build
 django_jasmine.egg-info/
 distribute*
 .tox/
+.cache/
