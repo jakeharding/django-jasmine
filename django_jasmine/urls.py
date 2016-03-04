@@ -8,9 +8,7 @@ else:
 from django.conf import settings
 from django.views.static import serve
 
-from .views import run_tests
-
-# static_root = os.path.join(os.path.dirname(__file__), 'static')
+from .views import DjangoJasmineView
 
 static_root = settings.STATIC_ROOT
 
@@ -27,6 +25,5 @@ urlpatterns = [
             settings.JASMINE_TEST_DIRECTORY, "fixtures",
         ),
     }, name='jasmine_fixtures'),
-    url('^(?P<path>.*)$', run_tests, name='jasmine_test_overview'),
-    # url('^$', run_tests, name='jasmine_test_overview'),
+    url('^jasmine-test-suite/(?P<path>.*)$', DjangoJasmineView.as_view(), name='jasmine_test_overview'),
 ]
