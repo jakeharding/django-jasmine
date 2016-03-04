@@ -1,16 +1,17 @@
 {% load url from future %}
+{% load static %}
 <!doctype html>
 
 <html>
 <head>
     <title>Jasmine Spec Runner</title>
-    <link rel="stylesheet" href="{{ STATIC_URL }}jasmine-latest/jasmine.css"
+    <link rel="stylesheet" href="{% static 'jasmine-latest/jasmine.css' %}"
         media="screen">
 
     {# core files #}
-    <script  src="{{ STATIC_URL }}jasmine-latest/jasmine.js"></script>
-    <script  src="{{ STATIC_URL }}jasmine-latest/jasmine-html.js"></script>
-    <script  src="{{ STATIC_URL }}jasmine-jquery-latest.js"></script>
+    <script  src="{% static 'jasmine-latest/jasmine.js' %}"></script>
+    <script  src="{% static 'jasmine-latest/jasmine-html.js' %}"></script>
+    <script  src="{% static 'jasmine-jquery-latest.js' %}"></script>
 
     {% block jasmine_preload %}{% endblock %}
 
@@ -21,7 +22,7 @@
 
     {# static files #}
     {% for url in suite.static_files %}
-    <script src="{{ STATIC_URL }}{{ url }}"></script>
+    <script src="{% static url %}"></script>
     {% endfor %}
 
     {# spec files #}
