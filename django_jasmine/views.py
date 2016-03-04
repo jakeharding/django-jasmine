@@ -16,6 +16,7 @@ logger = logging.getLogger("django_jasmine")
 
 def run_tests(request, path):
     """Run the jasmine tests and render index.html"""
+    print(path)
     root = os.path.join(settings.JASMINE_TEST_DIRECTORY, path)
     # Get all files in spec dir and subdirs
     all_files = []

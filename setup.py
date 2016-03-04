@@ -27,7 +27,7 @@ META_DATA = dict(
         'Topic :: Software Development :: Testing',
     ],
     install_requires= ['Django>=1.8', ],
-    packages=find_packages(exclude=["example", "tests"]),
+    packages=find_packages(exclude=["example_js", "tests"]),
     include_package_data=True,
     zip_safe=False,
     license='BSD'

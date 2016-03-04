@@ -9,3 +9,4 @@ django_jasmine.egg-info/
 distribute*
 .tox/
 .cache/
+*.sqlite3
