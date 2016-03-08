@@ -56,6 +56,7 @@ class DjangoJasmineView(TemplateView):
         data = {
             'files': [file for file in all_files if file.endswith('js')],
             'suite': suite,
-            'version': version or dj_jas_settings.DEFAULT_JASMINE_VERSION
+            'version': version or dj_jas_settings.DEFAULT_JASMINE_VERSION,
+            'v2': True
         }
         return data

@@ -13,3 +13,6 @@ class TestView(TestCase):
     def test_spec_files_served(self):
         for spec in example_specs:
             self.assertTrue(spec in str(self.rsp.content), '%s not in %s' % (spec, self.rsp.content))
+
+    # def test_jasmine_version(self):
+    #     import pdb; pdb.set_trace()

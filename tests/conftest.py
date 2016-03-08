@@ -12,11 +12,13 @@ def pytest_configure():
         DATABASES={'default': {'ENGINE': 'django.db.backends.sqlite3',
                                'NAME': 'sqlite.db'}},
         SECRET_KEY='Just a test key',
-        JASMINE_TEST_DIRECTORY= '%s/%s' % (path_to_repo, 'example/jasmine/'),
+        JASMINE_TEST_DIRECTORY= '%s/%s' % (path_to_repo, 'example_project/example_project/static/'),
         STATIC_URL='/static/',
         ROOT_URLCONF='tests.urls',
         INSTALLED_APPS=(
             'django_jasmine',
+            'django.contrib.contenttypes',
+            'django.contrib.auth',
         ),
     )
 
