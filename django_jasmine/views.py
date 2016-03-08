@@ -21,7 +21,8 @@ class DjangoJasmineView(TemplateView):
     def get_context_data(self, path=None):
         """Run the jasmine tests and render index.html"""
         print(path)
-        root = os.path.join(settings.JASMINE_TEST_DIRECTORY, path)
+        # root = os.path.join(settings.JASMINE_TEST_DIRECTORY, path)
+        root = settings.JASMINE_TEST_DIRECTORY
         # Get all files in spec dir and subdirs
         all_files = []
         for curpath, dirs, files in os.walk(os.path.join(root, "spec")):
@@ -52,7 +53,8 @@ class DjangoJasmineView(TemplateView):
             suite.update(json)
 
         data = {
-            'files': [path + file for file in all_files if file.endswith('js')],
+            'files': [file for file in all_files if file.endswith('js')],
             'suite': suite,
+            'version': path
         }
         return data

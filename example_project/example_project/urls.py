@@ -18,5 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('django_jasmine.urls'))
+    url(r'^jasmine-test-suite/', include('django_jasmine.urls'))
 ]
