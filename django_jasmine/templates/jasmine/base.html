@@ -19,15 +19,14 @@
 
     {% block jasmine_preload %}{% endblock %}
 
-    <script src="{% static 'js/Player.js' %}"></script>
     {# source files #}
     {% for url in suite.js_files %}
-    <script src="{% static url %}"></script>
+        <script src="{% static url %}"></script>
     {% endfor %}
 
     {# static files #}
     {% for url in suite.static_files %}
-    <script src="{% static url %}"></script>
+        <script src="{% static url %}"></script>
     {% endfor %}
 
     {# spec files #}
