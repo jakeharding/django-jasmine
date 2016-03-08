@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_jasmine'
+    'django_jasmine',
+    'example_project'
 )
 
 MIDDLEWARE_CLASSES = (

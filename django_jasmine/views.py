@@ -33,7 +33,6 @@ class DjangoJasmineView(TemplateView):
                     all_files.append(os.path.join(curpath, name))
 
         suite = {}
-
         # defaults
         suite['js_files'] = []
         suite['static_files'] = []
@@ -54,9 +53,9 @@ class DjangoJasmineView(TemplateView):
             file.close()
 
         data = {
-            'files': [file for file in all_files if file.endswith('js')],
+            'files': [fl for fl in all_files if fl.endswith('js')],
             'suite': suite,
             'version': version or dj_jas_settings.DEFAULT_JASMINE_VERSION,
-            'v2': True
+            # 'v2': True
         }
         return data
