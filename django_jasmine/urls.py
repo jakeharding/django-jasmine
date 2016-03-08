@@ -25,5 +25,5 @@ urlpatterns = [
             settings.JASMINE_TEST_DIRECTORY, "fixtures",
         ),
     }, name='jasmine_fixtures'),
-    url('^(?P<path>.*)$', DjangoJasmineView.as_view(), name='jasmine_test_overview'),
+    url('^(?P<version>.*)$', DjangoJasmineView.as_view(), name='jasmine_test_overview'),
 ]

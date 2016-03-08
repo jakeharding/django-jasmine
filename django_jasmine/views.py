@@ -7,6 +7,8 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views.generic.base import TemplateView
 
+from . import settings as dj_jas_settings
+
 if django.VERSION >= (1, 5):
     import json as simplejson
 else:
@@ -18,10 +20,8 @@ logger = logging.getLogger("django_jasmine")
 class DjangoJasmineView(TemplateView):
     template_name = "jasmine/index.html"
 
-    def get_context_data(self, path=None):
+    def get_context_data(self, version=None):
         """Run the jasmine tests and render index.html"""
-        print(path)
-        # root = os.path.join(settings.JASMINE_TEST_DIRECTORY, path)
         root = settings.JASMINE_TEST_DIRECTORY
         # Get all files in spec dir and subdirs
         all_files = []
@@ -51,10 +51,11 @@ class DjangoJasmineView(TemplateView):
                 # customize the Exception Type field in the debug Traceback
                 json = simplejson.loads(json)
             suite.update(json)
+            file.close()
 
         data = {
             'files': [file for file in all_files if file.endswith('js')],
             'suite': suite,
-            'version': path
+            'version': version or dj_jas_settings.DEFAULT_JASMINE_VERSION
         }
         return data
