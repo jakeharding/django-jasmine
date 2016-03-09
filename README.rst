@@ -15,12 +15,6 @@ provides a set of custom matchers for jQuery framework and an API for handling
 HTML fixtures in your specs.
 
 
-.. note::
-
-    Being overwhelmed by work, I won’t upgrade this package if nobody asks for
-    it. If you’re capable, please fork and pull request to help me, thanks in
-    advance !
-
 Installation
 ============
 
@@ -35,6 +29,9 @@ Installation
 6. Add a urlconf to include('django_jasmine.urls').
 7. Visit the URL you've included in your urlconf to display Jasmine test
    results.
+8. Add a corresponding tag from the Jasmine github repo to specify a version of Jasmine to test with. Otherwise the latest tag, currently v2.4.1, is loaded.
+
+*Jasmine is now loaded over cdn.rawgit.com.  A very obvious error message will appear if Jasmine isn't loaded correctly.*
 
 *See the example directory for more information.*
 
@@ -61,11 +58,6 @@ jasmine reporter), you can create a jasmine/index.html template as follow::
 
 
 *Read templates/jasmine/base.html for the default config*
-
-Several versions of jasmine will be kept for retro-compatibility. You can
-override jasmine/base.html, and call for a specific version of jasmine (default
-to jasmine-latest, a symlink to the latest version)
-
 
 Fixtures
 ========
@@ -96,27 +88,11 @@ running manage.py tests
 Todo
 ====
 
-1. Write django tests for this app
+1. Keep improving django tests
 2. Add Growl/notifyd notifications
-3. Rewrite the view to be class-based
-4. Add more settings for more flexibility
-
-Versions
-========
-
-Latest (Default)
-
-* jasmine-latest 1.3.1
-* jasmine-jquery-latest 1.5.2
-
-The Pypi django-jasmine version 0.3.1 includes:
-
-* jasmine 1.1.0.rc1
-* jasmine-jquery 1.3.1
-
-
-since django-jasmine==0.3.1, it'll also insure that Django>=1.3 is installed,
-otherwise will install it as a dependency
+3. Add more settings for more flexibility i.e. make a symbolic constant for cdn url.
+4. Thoroughly test fixtures and jasmine-jquery features.
+5. Improve README.
 
 
 license
