@@ -93,6 +93,7 @@ Todo
 3. Add more settings for more flexibility i.e. make a symbolic constant for cdn url.
 4. Thoroughly test fixtures and jasmine-jquery features.
 5. Improve README.
+6. Use a more specific pattern matcher for the version url. 
 
 
 license
