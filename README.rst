@@ -2,6 +2,8 @@
 django-jasmine
 ==============
 
+###Pull requests and issues are welcome!
+
 django-jasmine integrates the
 `Jasmine Javascript testing framework <http://pivotal.github.com/jasmine/>`_
 with `Django <http://www.djangoproject.com/>`_.  Jasmine is a behavior-driven
