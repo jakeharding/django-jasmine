@@ -10,8 +10,6 @@ from django.views.static import serve
 
 from .views import DjangoJasmineView
 
-static_root = settings.STATIC_ROOT
-
 dj_jas_view = DjangoJasmineView.as_view()
 
 urlpatterns = [
