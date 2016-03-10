@@ -2,7 +2,8 @@
 django-jasmine
 ==============
 
-###Pull requests and issues are welcome!
+Pull requests and issues are welcome!
+-------------
 
 django-jasmine integrates the
 `Jasmine Javascript testing framework <http://pivotal.github.com/jasmine/>`_
@@ -35,7 +36,7 @@ Installation
 
 *Jasmine is now loaded over cdn.rawgit.com.  A very obvious error message will appear if Jasmine isn't loaded correctly.*
 
-*See the example directory for more information.*
+*See the example_project directory for more information.*
 
 
 Template
@@ -95,7 +96,8 @@ Todo
 3. Add more settings for more flexibility i.e. make a symbolic constant for cdn url.
 4. Thoroughly test fixtures and jasmine-jquery features.
 5. Improve README.
-6. Use a more specific pattern matcher for the version url. 
+6. Use a more specific pattern matcher for the version url.
+7. Improve error message when Jasmine fails to load over cdn.
 
 
 license
