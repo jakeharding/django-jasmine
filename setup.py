@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 META_DATA = dict(
     name='django-jasmine',
-    version='0.4.2',
+    version='0.5.0',
     description='Jasmine Javascript testing integration for Django.',
     long_description=open('README.rst').read(),
     author='Jonathan McCoy',
@@ -27,7 +27,7 @@ META_DATA = dict(
         'Topic :: Software Development :: Testing',
     ],
     install_requires= ['Django>=1.8', ],
-    packages=find_packages(exclude=["example", "tests"]),
+    packages=find_packages(exclude=["example_project", "tests"]),
     include_package_data=True,
     zip_safe=False,
     license='BSD'
