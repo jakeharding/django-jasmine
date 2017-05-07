@@ -1,10 +1,6 @@
 import os
-import django
 
-if django.VERSION >= (1, 5):
-    from django.conf.urls import patterns, url
-else:
-    from django.conf.urls import url
+from django.conf.urls import url
 from django.conf import settings
 from django.views.static import serve
 
