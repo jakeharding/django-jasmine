@@ -2,6 +2,19 @@
 django-jasmine
 ==============
 
+Master:
+.. image:: https://travis-ci.org/jakeharding/django-jasmine.svg?branch=master
+    :target: https://travis-ci.org/jakeharding/django-jasmine
+.. image:: https://coveralls.io/repos/github/jakeharding/django-jasmine/badge.svg?branch=master
+    :target: https://coveralls.io/github/jakeharding/django-jasmine?branch=master
+
+Develop:
+.. image:: https://travis-ci.org/jakeharding/django-jasmine.svg?branch=develop
+    :target: https://travis-ci.org/jakeharding/django-jasmine
+.. image:: https://coveralls.io/repos/github/jakeharding/django-jasmine/badge.svg?branch=develop
+    :target: https://coveralls.io/github/jakeharding/django-jasmine?branch=develop
+
+
 Pull requests and issues are welcome!
 -------------------------------------
 
