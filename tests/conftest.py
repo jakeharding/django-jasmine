@@ -1,6 +1,7 @@
 """Minimal settings needed for tests."""
 
 import os
+
 path_to_repo = os.path.dirname((os.path.dirname(os.path.abspath(__file__))))
 
 def pytest_configure():

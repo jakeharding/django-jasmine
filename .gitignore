@@ -10,3 +10,4 @@ distribute*
 .tox/
 .cache/
 *.sqlite3
+.idea/
