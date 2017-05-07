@@ -1,10 +1,11 @@
-sudo: false
 language: python
 python:
   - "2.7"
   - "3.4"
   - "3.5"
   - "3.6"
+script:
+  - "cd django_jasmine"
 install:
     - pip install tox-travis python-coveralls
 script:
