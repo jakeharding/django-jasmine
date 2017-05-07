@@ -3,7 +3,7 @@ django-jasmine
 ==============
 
 Pull requests and issues are welcome!
--------------
+-------------------------------------
 
 django-jasmine integrates the
 `Jasmine Javascript testing framework <http://pivotal.github.com/jasmine/>`_
@@ -100,9 +100,14 @@ Todo
 7. Improve error message when Jasmine fails to load over cdn.
 
 
-license
+License
 =======
 
 Copyright (c) 2010 Movity, Inc
 Licensed new-style BSD, also containing Jasmine, which is licensed MIT. See
 LICENSE file for more information.
+
+Contributing
+============
+
+Please see the `contributing file <https://github.com/jakeharding/django-jasmine/blob/master/CONTRIBUTING.md>`_.
