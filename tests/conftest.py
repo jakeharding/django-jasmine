@@ -1,7 +1,6 @@
 """Minimal settings needed for tests."""
 
 import os
-
 path_to_repo = os.path.dirname((os.path.dirname(os.path.abspath(__file__))))
 
 def pytest_configure():
@@ -20,6 +19,10 @@ def pytest_configure():
             'django.contrib.contenttypes',
             'django.contrib.auth',
         ),
+        TEMPLATES=[{
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'APP_DIRS': True,
+        }],
     )
 
     import django
