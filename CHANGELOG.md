@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.5.1
+
+**Merge pull requests: 13,14**
+
+- Support Django 1.8+
+- Use Jasmine 2.6.1 as default
+
 ## 0.5.0
 
 **API changes**
