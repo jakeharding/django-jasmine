@@ -10,6 +10,7 @@ from django_jasmine import settings as dj_jas_settings
 
 example_specs = ['PlayerSpec.js', 'SpecHelper.js']
 
+
 class TestView(TestCase):
 
     def setUp(self):
@@ -26,5 +27,4 @@ class TestView(TestCase):
         self.assertEqual(self.rsp.context['version'], dj_jas_settings.DEFAULT_JASMINE_VERSION)
         not_default_ver = 'v2.0.1'
         r = self.client.get(reverse('jasmine_version', args=[not_default_ver]))
-        # import pdb; pdb.set_trace()
         self.assertEqual(r.context['version'], not_default_ver)
