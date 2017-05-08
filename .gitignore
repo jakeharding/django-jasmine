@@ -10,3 +10,7 @@ distribute*
 .tox/
 .cache/
 *.sqlite3
+*.db
+.idea/
+.coverage
+htmlcov
