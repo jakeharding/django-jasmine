@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 META_DATA = dict(
     name='django-jasmine',
-    version='0.5.0',
+    version='0.5.1',
     description='Jasmine Javascript testing integration for Django.',
     long_description=open('README.rst').read(),
     author='Jonathan McCoy',
